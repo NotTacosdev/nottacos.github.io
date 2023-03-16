@@ -1,1 +1,42 @@
-html, body { cursor: none; }
+:root {
+    --dark: #1f1f24;
+    --purple: #c2c2ff;
+  }
+  html,
+  body {
+    position: relative;
+    cursor: none;
+    height: 100%;
+    width: 100%;
+    background: var(--dark);
+    margin: 0;
+  }
+  .box {
+    padding: 30px;
+    color: var(--purple);
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 30px;
+  }
+  .right {
+    float: right;
+  }
+  .a-link {
+    color: #fff;
+    font-weight: 800;
+    cursor: none;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  .menu li {
+    display: inline-block;
+  }
+  .menu li a {
+    display: inline-block;
+    margin-right: 30px;
+    text-decoration: none;
+  }

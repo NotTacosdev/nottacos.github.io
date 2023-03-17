@@ -40,3 +40,9 @@
     margin-right: 30px;
     text-decoration: none;
   }
+  .img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }

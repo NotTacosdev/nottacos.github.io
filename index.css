@@ -15,4 +15,5 @@ h1 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    cursor: none;
 }

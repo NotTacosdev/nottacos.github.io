@@ -37,6 +37,7 @@ a, a:hover {
   background-image: url('https://i.pinimg.com/originals/2b/de/7d/2bde7d14133968f97d6c4dd898edb989.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: none;
 }
 
 .wrapper::before {

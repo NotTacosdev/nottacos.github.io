@@ -1,0 +1,172 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333; /* Default text color */
+  background-color: #f4f4f4; /* Default background color */
+  transition: background-color 0.3s, color 0.3s; /* Transition effect for background color and text color */
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  border: 2px solid #ccc; /* Light mode border color */
+  border-radius: 10px;
+  background-color: #fff; /* Light mode background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.calculator input[type="text"] {
+  width: calc(100% - 20px); /* Adjust the width as needed */
+  margin: 10px auto; /* Center the textbox horizontally */
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid #ccc; /* Light mode border color */
+  outline: none;
+  background-color: #f0f0f0; /* Light mode background color */
+  color: #333; /* Light mode text color */
+  transition: color 0.3s; /* Transition for text color */
+}
+
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.calculator .buttons button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e0e0e0; /* Light mode button background color */
+  transition: background-color 0.3s, transform 0.1s;
+  color: #333; /* Light mode button text color */
+}
+
+.calculator .buttons button:hover {
+  background-color: #ccc; /* Light mode button hover background color */
+}
+
+.calculator .buttons button:active {
+  transform: scale(0.95);
+}
+
+.button-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #8a959e;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none; /* Remove default underline */
+}
+
+.back:hover {
+  background-color: #4d4941;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333; /* Dark mode background color */
+  color: #f4f4f4; /* Dark mode text color */
+}
+
+.dark-mode .calculator-container {
+  background-color: #333; /* Dark mode background color */
+}
+
+.dark-mode .calculator {
+  border-color: #666; /* Dark mode border color */
+  background-color: #444; /* Dark mode background color */
+}
+
+.dark-mode .calculator input[type="text"] {
+  border-bottom-color: #666; /* Dark mode border color */
+  background-color: #555; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
+}
+
+.dark-mode .calculator .buttons button {
+  background-color: #666; /* Dark mode button background color */
+  color: #f4f4f4; /* Dark mode button text color */
+}
+
+.dark-mode .calculator .buttons button:hover {
+  background-color: #777; /* Dark mode button hover background color */
+}
+
+/* Dark mode toggle switch */
+.switch {
+  position: absolute;
+  top: calc(20px + 2em); /* Adjust the top position to fit under the Go Back button */
+  left: 20px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}

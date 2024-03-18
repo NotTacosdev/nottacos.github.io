@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your background</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="favicon (1).ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4; 
+            opacity: 0;
+            animation: fadeIn 0.9s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .color-options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .color-option {
+            width: 70px;
+            height: 70px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(37, 37, 37, 0.4); 
+        }
+
+        .color-option i {
+            font-size: 30px;
+            color: white;
+            line-height: 70px;
+        }
+
+        #color-option-1 {
+            background-color: #3498db;
+        }
+
+        #color-option-2 {
+            background-color: #e74c3c;
+        }
+
+        #color-option-3 {
+            background-color: #2ecc71;
+        }
+
+        #color-option-4 {
+            background-color: #f39c12;
+        }
+
+        #color-option-5 {
+            background-color: #dfdfdf;
+            color: #333;
+        }
+
+        #color-option-6 {
+            background-image: linear-gradient(to right, #3498db, #e74c3c);
+        }
+
+        #color-option-7 {
+            background-image: linear-gradient(to right, #2ecc71, #f39c12);
+        }
+
+        #color-option-8 {
+            background-image: linear-gradient(to right, #3498db, #2ecc71);
+        }
+
+        #color-option-9 {
+            background-image: linear-gradient(to right, #e74c3c, #f39c12);
+        }
+         
+        .custom-color input[type="color"] {
+            width: 70px;
+            height: 70px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            appearance: none;      
+        }
+
+        .custom-color input[type="color"]::-webkit-color-swatch-wrapper {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .custom-color input[type="color"]::-webkit-color-swatch {
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .custom-color input[type="color"]:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .custom-color label {
+            display: none;
+        }
+
+        .custom-gradient-btn {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            border: none;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .custom-gradient-btn i {
+            font-size: 30px;
+            color: white;
+            line-height: 70px;
+        }
+
+        .custom-gradient-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(37, 37, 37, 0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select our create your background color:</h2>
+        <div class="color-options">
+            <div class="color-option" id="color-option-1" onclick="changeBackgroundColor('#3498db')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="color-option" id="color-option-2" onclick="changeBackgroundColor('#e74c3c')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="color-option" id="color-option-3" onclick="changeBackgroundColor('#2ecc71')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="color-option" id="color-option-4" onclick="changeBackgroundColor('#f39c12')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="color-option" id="color-option-5" onclick="changeBackgroundColor('#fff')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="color-option" id="color-option-6" onclick="changeBackgroundColor('linear-gradient(to right, #3498db, #e74c3c)')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="color-option" id="color-option-7" onclick="changeBackgroundColor('linear-gradient(to right, #2ecc71, #f39c12)')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="color-option" id="color-option-8" onclick="changeBackgroundColor('linear-gradient(to right, #3498db, #2ecc71)')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="color-option" id="color-option-9" onclick="changeBackgroundColor('linear-gradient(to right, #e74c3c, #f39c12)')">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="custom-color">
+                <label for="custom-color-picker">
+                </label>
+                <input type="color" id="custom-color-picker" onchange="changeBackgroundColor(this.value)">
+            
+        </div>
+        <div class="custom-gradient-btn" onclick="createLinearGradient()">
+            <i class="fas fa-paint-brush"></i>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+</div>
+    </div>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.background = color;
+            localStorage.setItem('backgroundColor', color);
+            window.location.href = 'skiddedweather.html';
+        }
+        
+        function createLinearGradient() {
+    
+    const confirmCreate = confirm("Do you want to create a linear gradient background?");
+    
+    
+    if (confirmCreate) {
+        
+        const gradientDirection = prompt('Enter gradient direction (e.g., to right, to left, etc.):');
+        const startColor = prompt('Enter start color:');
+        const endColor = prompt('Enter end color:');
+        
+        
+        if (gradientDirection && startColor && endColor) {
+            
+            const linearGradient = `linear-gradient(${gradientDirection}, ${startColor}, ${endColor})`;
+            
+            changeBackgroundColor(linearGradient);
+        } else {
+            alert('Please provide all necessary inputs.');
+        }
+    } else {
+        // If the user cancels, do nothing. (just in case)
+        return;
+    }
+}
+
+    </script>
+</body>
+</html>

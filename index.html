@@ -1,49 +1,77 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vexxwyd</title>
-  <link rel="icon" href="https://cdn.discordapp.com/attachments/1215156108734365717/1218742729454911528/memeeme.png?ex=6608c59d&is=65f6509d&hm=92a8d3a0074d52c894bb202d548fde1eb29fa5eb841ad159c0c1c9853936bca4&">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="button-container">
-    <a href="http://nottacos.lol" class="back">Go Back</a>
-    <!-- Dark/Light mode toggle -->
-    <label class="switch">
-      <input type="checkbox" id="modeToggle">
-      <span class="slider"></span>
-    </label>
-  </div>
+<html>
+    <head>
+        <title>loading...</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="js/lanyard/lanyard.js"></script>
+        <script src="js/lanyard/config.js"></script>
+        <script src="js/lanyard/init.js"></script>
+        <script src="js/typing-animation/typing.js"></script>
+        <script src="js/background/animation-container.js"></script>
+        <script type="module" src="https://cdn.skypack.dev/three@0.134"></script>
+        
 
-  <div class="calculator-container">
-    <div class="calculator">
-      <input type="text" id="result">
-      <div class="buttons">
-        <button onclick="clearResult()">C</button>
-        <button onclick="appendToResult('7')">7</button>
-        <button onclick="appendToResult('8')">8</button>
-        <button onclick="appendToResult('9')">9</button>
-        <button onclick="appendToResult('+')">+</button>
-        <button onclick="appendToResult('4')">4</button>
-        <button onclick="appendToResult('5')">5</button>
-        <button onclick="appendToResult('6')">6</button>
-        <button onclick="appendToResult('-')">-</button>
-        <button onclick="appendToResult('1')">1</button>
-        <button onclick="appendToResult('2')">2</button>
-        <button onclick="appendToResult('3')">3</button>
-        <button onclick="appendToResult('*')">*</button>
-        <button onclick="appendToResult('0')">0</button>
-        <button onclick="appendToResult('.')">.</button>
-        <button onclick="calculateResult()">=</button>
-        <button onclick="appendToResult('/')">/</button>
-      </div>
-    </div>
-  </div>
+    </head>
+    <body>
+        <div id="animation-container"></div>
+        <script type="module" src="js/animation-container.js"></script>
 
-  <script src="script.js"></script>
-</body>
+        <!-- Background -->
+        
+
+        <div class="blurry-container">
+            <div id="main-content">
+            <div class="content-container">
+                <!-- Typing Animation Container -->
+                <div class="typing-container">
+                    <div class="typing-animation"><span id="typing-text"></span><span class="cursor"></span></div>
+                </div>
+
+                <div class="display">
+                    <div class="userinfo" id="margin">
+                        <img id="avatar" draggable="false" alt="profile picture" width="64" height="64" src="https://cdn.discordapp.com/embed/avatars/0.png" />
+                        <span id="display"></span>
+                        <span id="username"></span>
+                        <span id="status"></span>
+                        <a id="viewuser" class="button" type="button">
+                            <i class="fas fa-user-plus"></i> <!-- Font Awesome 'add user' icon -->
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="activities">
+                        <!-- Spotify Activity Container -->
+                        <div class="spotify-activity" id="spotify-activity">
+                            <!-- Spotify info like image, title, etc. goes here -->
+                            <img class="spotify-image">
+                            <span class="spotify-song"></span>
+                            <span class="spotify-artist"></span>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Buttons Container -->
+            <div class="group-container">
+                    <!-- Steam Button -->
+                    <div class="group relative flex h-fit w-fit flex-col items-center justify-start">
+                        <a href="https://steamcommunity.com/profiles/76561197963844294" class="social-item w-embed flex h-[45px] w-[45px] flex-col items-center justify-center">
+                            <i class="fab fa-steam icon" style="font-size: 30px;"></i>
+                            <div class="label">Steam</div>
+                        </a>
+                    </div>
+                    <!-- Discord Button -->
+                    <div class="group relative flex h-fit w-fit flex-col items-center justify-start">
+                        <a href="https://discord.gg/Q4cda8nq" class="social-item w-embed flex h-[45px] w-[45px] flex-col items-center justify-center">
+                            <i class="fab fa-discord icon" style="font-size: 30px;"></i>
+                            <div class="label">Discord</div>
+                        </a>
+                    </div>
+                    <!-- Loadout Button-->
+                </div>
+            </div>
+            </div>
+            <!-- Loadout Content (hidden initially) -->
+    </body>
 </html>

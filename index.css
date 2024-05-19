@@ -1,0 +1,18 @@
+.back-logo {
+	z-index: 0;
+	display: flex;
+	position: fixed;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+        opacity: 0.5;
+}
+
+.back-logo1 {
+	z-index: 0;
+	display: flex;
+	position: fixed;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
